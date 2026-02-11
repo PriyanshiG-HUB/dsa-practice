@@ -22,3 +22,20 @@ class Solution {
         return res;
     }
 };
+
+Time Complexity:
+Sorting: O(n log n + m log m)
+Traversal: O(n + m)
+
+unordered_set<int> s(a.begin(), a.end());
+        unordered_set<int> ans;
+
+        for (int x : b) {
+            if (s.count(x))
+                ans.insert(x);
+        }
+
+        return vector<int>(ans.begin(), ans.end());
+Time Complexity:
+Sorting: O(n + m)
+Traversal: O(n)
